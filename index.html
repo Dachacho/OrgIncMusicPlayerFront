@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <title>Document</title>
+</head>
+<body class="bg-gray-100 p-8 font-sans">
+    <h1 class="text-3xl font-bold mb-6 text-gray-800">Music</h1>
+    <table class="w-full bg-white shadow-md rounded-lg overflow-hidden">
+      <thead>
+        <tr class="bg-gray-200 text-gray-700">
+          <th class="py-3 px-6 text-left">Song</th>
+          <th class="py-3 px-6 text-left">Album</th>
+          <th class="py-3 px-6 text-left">Artist</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr hx-get="song.html" hx-target="#song-details" class="hover:bg-gray-50 cursor-pointer">
+          <td class="py-4 px-6">Thug Tears</td>
+          <td class="py-4 px-6">Veteran</td>
+          <td class="py-4 px-6">JPEGMAFIA</td>
+        </tr>
+        <tr hx-get="song.html" hx-target="#song-details" class="hover:bg-gray-50 cursor-pointer">
+          <td class="py-4 px-6">Anesthetize</td>
+          <td class="py-4 px-6">Fear Of The Blank Planet</td>
+          <td class="py-4 px-6">Porcupine Tree</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div id="song-details" class="mt-8"></div>
+   </body>
+   </html>
